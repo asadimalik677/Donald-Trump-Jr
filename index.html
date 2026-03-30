@@ -1,0 +1,1368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Should Republicans Have Allowed a Subpoena for Donald Trump Jr. Over Critical Minerals? | Policy Analysis</title>
+  <meta name="description" content="A balanced analysis of the debate over subpoenaing Donald Trump Jr. regarding critical mineral investments — covering transparency, national security, and political accountability." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Should Republicans Have Allowed a Subpoena for Donald Trump Jr. Over Critical Minerals?" />
+  <meta property="og:description" content="Exploring both sides of the debate on oversight, political accountability, and the role of critical minerals in national security." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=1200&q=80" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://example.com/trump-jr-subpoena-critical-minerals" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Libre Baskerville (display) + Libre Franklin (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ═══════════════════════════════════════════
+       TOKENS — Broadsheet / Political Journal
+    ═══════════════════════════════════════════ */
+    :root {
+      --paper:     #f8f5ef;
+      --paper-dk:  #ede9e0;
+      --cream:     #faf8f4;
+      --ink:       #1a1713;
+      --ink-mid:   #2e2a24;
+      --rule:      #c8bfa8;
+      --rule-dk:   #a89880;
+      --gold:      #c49a28;
+      --gold-lt:   #d4b044;
+      --gold-pale: #fdf5dc;
+      --red-flag:  #b22222;
+      --blue-flag: #1a3a6b;
+      --muted:     #6b6258;
+      --faint:     #9a8e80;
+      --white:     #ffffff;
+      --shadow:    0 2px 18px rgba(26,23,19,.08);
+      --shadow-lg: 0 10px 44px rgba(26,23,19,.12);
+      --r: 4px;
+      --rlg: 10px;
+      --bas: 'Libre Baskerville', Georgia, serif;
+      --fra: 'Libre Franklin', sans-serif;
+    }
+
+    /* ═══════════════════════════════════════════
+       RESET
+    ═══════════════════════════════════════════ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--fra);
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.7;
+      font-size: 16px;
+      overflow-x: hidden;
+    }
+    img { display: block; max-width: 100%; }
+    a  { color: inherit; text-decoration: none; }
+
+    /* ═══════════════════════════════════════════
+       TYPE
+    ═══════════════════════════════════════════ */
+    h1,h2,h3,h4 { font-family: var(--bas); line-height: 1.15; }
+    h1 { font-size: clamp(2.2rem,5.5vw,4.4rem); font-weight: 700; letter-spacing: -.02em; }
+    h2 { font-size: clamp(1.7rem,3.2vw,2.8rem); font-weight: 700; }
+    h3 { font-size: clamp(1.1rem,1.8vw,1.45rem); font-weight: 700; }
+    h4 { font-size: .98rem; font-weight: 700; }
+    p  { color: var(--ink-mid); font-weight: 300; font-size: .97rem; line-height: 1.85; }
+
+    /* ═══════════════════════════════════════════
+       UTILITIES
+    ═══════════════════════════════════════════ */
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 28px; }
+
+    /* Fine-grain texture overlay */
+    .grain {
+      position: relative;
+    }
+    .grain::after {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+
+    .section-rule {
+      display: flex; align-items: center; gap: 14px;
+      margin-bottom: 18px;
+    }
+    .section-rule::before, .section-rule::after {
+      content: ''; flex: 1; height: 1px; background: var(--rule);
+    }
+    .section-rule span {
+      font-family: var(--fra); font-size: .65rem; font-weight: 600;
+      letter-spacing: .16em; text-transform: uppercase;
+      color: var(--faint); white-space: nowrap;
+    }
+
+    .kicker {
+      display: inline-block;
+      font-family: var(--fra); font-size: .65rem; font-weight: 700;
+      letter-spacing: .16em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 12px;
+    }
+
+    .label-pill {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-family: var(--fra); font-size: .66rem; font-weight: 700;
+      letter-spacing: .12em; text-transform: uppercase;
+      padding: 4px 12px; border-radius: 2px;
+    }
+    .label-pill--pro  { background: #f0f7ee; color: #2d6a3f; border: 1px solid #b8dfc0; }
+    .label-pill--con  { background: #fff0f0; color: var(--red-flag); border: 1px solid #f5c0c0; }
+    .label-pill--info { background: var(--gold-pale); color: #7a5c10; border: 1px solid #e8d080; }
+
+    .btn-ink {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--ink); color: var(--paper);
+      font-family: var(--fra); font-weight: 600; font-size: .88rem;
+      padding: 12px 26px; border-radius: var(--r);
+      border: none; cursor: pointer;
+      transition: background .2s, transform .2s;
+    }
+    .btn-ink:hover { background: var(--ink-mid); transform: translateY(-1px); }
+    .btn-gold {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--gold); color: #fff;
+      font-family: var(--fra); font-weight: 600; font-size: .88rem;
+      padding: 12px 26px; border-radius: var(--r);
+      border: none; cursor: pointer;
+      box-shadow: 0 3px 14px rgba(196,154,40,.35);
+      transition: background .2s, transform .2s, box-shadow .2s;
+    }
+    .btn-gold:hover { background: var(--gold-lt); transform: translateY(-1px); box-shadow: 0 6px 22px rgba(196,154,40,.45); }
+    .btn-outline-ink {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: transparent; color: var(--ink);
+      font-family: var(--fra); font-weight: 600; font-size: .88rem;
+      padding: 11px 24px; border-radius: var(--r);
+      border: 1.5px solid var(--rule-dk); cursor: pointer;
+      transition: border-color .2s, background .2s, transform .2s;
+    }
+    .btn-outline-ink:hover { border-color: var(--ink); background: var(--paper-dk); transform: translateY(-1px); }
+
+    /* ═══════════════════════════════════════════
+       MASTHEAD
+    ═══════════════════════════════════════════ */
+    .masthead {
+      background: var(--ink);
+      border-bottom: 3px double rgba(255,255,255,.15);
+      padding: 10px 0;
+    }
+    .masthead__inner {
+      display: flex; align-items: center;
+      justify-content: space-between; flex-wrap: wrap; gap: 8px;
+    }
+    .masthead__date {
+      font-family: var(--fra); font-size: .68rem; font-weight: 500;
+      letter-spacing: .1em; text-transform: uppercase;
+      color: rgba(255,255,255,.4);
+    }
+    .masthead__logo {
+      font-family: var(--bas); font-size: 1.55rem; font-weight: 700;
+      font-style: italic; color: var(--paper);
+      letter-spacing: .01em; text-align: center; flex: 1;
+    }
+    .masthead__logo em { color: var(--gold); font-style: normal; }
+    .masthead__tag {
+      font-family: var(--fra); font-size: .68rem; font-weight: 500;
+      letter-spacing: .08em; color: rgba(255,255,255,.4);
+      text-align: right;
+    }
+    @media(max-width:680px) { .masthead__date, .masthead__tag { display:none; } }
+
+    /* ═══════════════════════════════════════════
+       NAV
+    ═══════════════════════════════════════════ */
+    .nav {
+      position: sticky; top: 0; z-index: 200;
+      background: rgba(248,245,239,.96);
+      backdrop-filter: blur(14px);
+      border-bottom: 2px solid var(--ink);
+    }
+    .nav__inner {
+      display: flex; align-items: center;
+      justify-content: space-between; height: 52px;
+    }
+    .nav__sections { display: flex; gap: 0; list-style: none; }
+    .nav__sections a {
+      display: block;
+      font-family: var(--fra); font-size: .76rem; font-weight: 600;
+      letter-spacing: .06em; text-transform: uppercase;
+      color: var(--muted); padding: 0 16px; line-height: 52px;
+      border-right: 1px solid var(--rule);
+      transition: color .2s, background .2s;
+    }
+    .nav__sections a:hover { color: var(--ink); background: var(--paper-dk); }
+    .nav__cta { font-family: var(--fra); font-size: .74rem; font-weight: 700; color: var(--gold); letter-spacing: .04em; cursor: pointer; }
+    @media(max-width:780px) { .nav__sections { display:none; } }
+
+    /* ═══════════════════════════════════════════
+       HERO — NEWSPAPER FRONT PAGE
+    ═══════════════════════════════════════════ */
+    .hero {
+      background: var(--cream);
+      border-bottom: 3px double var(--rule-dk);
+      padding: 48px 0 0;
+      position: relative; overflow: hidden;
+    }
+    /* Fine rule pattern */
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: repeating-linear-gradient(
+        0deg, transparent, transparent 28px,
+        rgba(200,191,168,.15) 28px, rgba(200,191,168,.15) 29px
+      );
+    }
+    .hero__layout {
+      position: relative; z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr 3px 1fr;
+      gap: 0;
+      align-items: start;
+    }
+    .hero__rule-v {
+      background: var(--rule);
+      align-self: stretch;
+      margin: 0 28px;
+    }
+    .hero__left { padding-bottom: 48px; }
+    .hero__meta {
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 20px;
+    }
+    .hero__meta time {
+      font-family: var(--fra); font-size: .7rem; font-weight: 500;
+      letter-spacing: .08em; color: var(--faint);
+    }
+    .hero h1 { margin-bottom: 18px; color: var(--ink); }
+    .hero h1 em { font-style: italic; color: var(--muted); font-size: .88em; }
+    .hero__deck {
+      font-family: var(--bas); font-style: italic;
+      font-size: 1.05rem; color: var(--muted);
+      line-height: 1.65; margin-bottom: 28px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--rule);
+    }
+    .hero__byline {
+      display: flex; align-items: center; gap: 12px;
+      font-family: var(--fra); font-size: .74rem;
+      color: var(--faint); font-weight: 500; letter-spacing: .04em;
+    }
+    .hero__byline strong { color: var(--ink); font-weight: 700; }
+    .hero__byline-sep { width: 1px; height: 14px; background: var(--rule); }
+    .hero__right { padding-bottom: 0; }
+    .hero__img-main img {
+      width: 100%; height: 360px; object-fit: cover;
+      display: block; box-shadow: var(--shadow);
+    }
+    .hero__img-caption {
+      background: var(--ink); color: rgba(255,255,255,.65);
+      font-family: var(--fra); font-size: .7rem; font-weight: 400;
+      padding: 8px 14px; line-height: 1.5;
+      font-style: italic;
+    }
+    .hero__btns { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
+    @media(max-width:840px) {
+      .hero__layout { grid-template-columns: 1fr; }
+      .hero__rule-v { display: none; }
+      .hero__img-main img { height: 260px; }
+      .hero__left { padding-bottom: 32px; }
+    }
+
+    /* ═══════════════════════════════════════════
+       CONTEXT BAR
+    ═══════════════════════════════════════════ */
+    .context-bar {
+      background: var(--ink);
+      padding: 16px 0;
+    }
+    .context-bar__row {
+      display: flex; align-items: center; gap: 0;
+      overflow-x: auto;
+    }
+    .context-item {
+      display: flex; align-items: center; gap: 12px;
+      padding: 8px 24px;
+      border-right: 1px solid rgba(255,255,255,.1);
+      flex-shrink: 0;
+    }
+    .context-item__label {
+      font-family: var(--fra); font-size: .62rem; font-weight: 700;
+      letter-spacing: .12em; text-transform: uppercase;
+      color: rgba(255,255,255,.35);
+    }
+    .context-item__val {
+      font-family: var(--bas); font-size: .88rem; font-weight: 700;
+      color: var(--gold);
+    }
+
+    /* ═══════════════════════════════════════════
+       SECTIONS
+    ═══════════════════════════════════════════ */
+    .sec { padding: 72px 0; }
+    .sec--paper  { background: var(--paper); }
+    .sec--cream  { background: var(--cream); }
+    .sec--ink    { background: var(--ink); }
+    .sec--paperd { background: var(--paper-dk); }
+
+    /* ═══════════════════════════════════════════
+       INTRO — BROADSHEET COLUMN
+    ═══════════════════════════════════════════ */
+    .intro-cols {
+      display: grid;
+      grid-template-columns: 2fr 1px 1.2fr;
+      gap: 0; align-items: start;
+    }
+    .intro-cols__rule { background: var(--rule); align-self: stretch; margin: 0 36px; }
+    .intro-main { }
+    .intro-main p { margin-bottom: 18px; font-size: 1rem; text-align: justify; }
+    .intro-main p:first-of-type::first-letter {
+      font-family: var(--bas); font-size: 4.5rem; font-weight: 700;
+      float: left; line-height: .75; margin: 6px 8px 0 0;
+      color: var(--ink);
+    }
+    .intro-sidebar { }
+    .aside-box {
+      background: var(--paper-dk);
+      border: 1px solid var(--rule);
+      border-top: 3px solid var(--ink);
+      padding: 22px 20px;
+      margin-bottom: 20px;
+    }
+    .aside-box__title {
+      font-family: var(--fra); font-size: .65rem; font-weight: 700;
+      letter-spacing: .14em; text-transform: uppercase;
+      color: var(--faint); margin-bottom: 14px;
+      padding-bottom: 10px; border-bottom: 1px solid var(--rule);
+    }
+    .aside-box p { font-size: .86rem; margin-bottom: 10px; }
+    .aside-box p:last-child { margin-bottom: 0; }
+    @media(max-width:880px) {
+      .intro-cols { grid-template-columns: 1fr; }
+      .intro-cols__rule { display: none; }
+    }
+
+    /* ═══════════════════════════════════════════
+       MINERAL EXPLAINER — CARDS
+    ═══════════════════════════════════════════ */
+    .mineral-grid {
+      display: grid; grid-template-columns: repeat(3,1fr); gap: 0;
+      border: 1px solid var(--rule-dk);
+    }
+    .mineral-card {
+      padding: 28px 24px;
+      border-right: 1px solid var(--rule);
+      transition: background .2s;
+    }
+    .mineral-card:last-child { border-right: none; }
+    .mineral-card:hover { background: var(--gold-pale); }
+    .mineral-card__symbol {
+      font-family: var(--bas); font-size: 2.8rem; font-weight: 700;
+      color: var(--gold); line-height: 1; margin-bottom: 6px;
+    }
+    .mineral-card__name {
+      font-family: var(--fra); font-size: .65rem; font-weight: 700;
+      letter-spacing: .12em; text-transform: uppercase;
+      color: var(--faint); margin-bottom: 14px;
+    }
+    .mineral-card h3 { font-size: 1rem; margin-bottom: 8px; }
+    .mineral-card p  { font-size: .86rem; }
+    @media(max-width:680px) { .mineral-grid { grid-template-columns: 1fr; } .mineral-card { border-right: none; border-bottom: 1px solid var(--rule); } .mineral-card:last-child { border-bottom: none; } }
+
+    /* ═══════════════════════════════════════════
+       PRO / CON — DEBATE LAYOUT
+    ═══════════════════════════════════════════ */
+    .debate-header {
+      display: grid; grid-template-columns: 1fr 1fr;
+      border-bottom: 2px solid var(--ink);
+      margin-bottom: 0;
+    }
+    .debate-header__side {
+      padding: 18px 24px;
+      font-family: var(--fra); font-size: .7rem; font-weight: 700;
+      letter-spacing: .14em; text-transform: uppercase;
+      text-align: center;
+    }
+    .debate-header__side--pro { background: #2d6a3f; color: #fff; }
+    .debate-header__side--con { background: var(--red-flag); color: #fff; }
+
+    .debate-grid {
+      display: grid; grid-template-columns: 1fr 1px 1fr;
+      border: 1px solid var(--rule-dk);
+      border-top: none;
+    }
+    .debate-rule { background: var(--rule-dk); }
+    .debate-col { padding: 32px 28px; }
+    .debate-col--pro { background: #f8fdf8; }
+    .debate-col--con { background: #fdf8f8; }
+    .debate-point {
+      display: flex; gap: 14px; align-items: flex-start;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .debate-point:last-child { border-bottom: none; padding-bottom: 0; }
+    .debate-point__icon {
+      width: 32px; height: 32px; flex-shrink: 0;
+      border-radius: 50%; display: grid; place-items: center;
+      font-size: .85rem; margin-top: 2px;
+    }
+    .debate-point__icon--pro { background: #e8f5ec; color: #2d6a3f; }
+    .debate-point__icon--con { background: #fde8e8; color: var(--red-flag); }
+    .debate-point h4 { font-size: .95rem; margin-bottom: 6px; }
+    .debate-point p  { font-size: .86rem; }
+    @media(max-width:680px) {
+      .debate-grid { grid-template-columns: 1fr; }
+      .debate-rule { display: none; }
+      .debate-header { grid-template-columns: 1fr; }
+    }
+
+    /* ═══════════════════════════════════════════
+       POLITICAL CONTEXT — TIMELINE
+    ═══════════════════════════════════════════ */
+    .context-section { background: var(--ink); padding: 72px 0; }
+    .context-section .section-rule::before,
+    .context-section .section-rule::after { background: rgba(255,255,255,.15); }
+    .context-section .section-rule span { color: rgba(255,255,255,.3); }
+    .context-section h2 { color: var(--paper); margin-bottom: 10px; }
+    .context-section > .container > p { color: var(--faint); margin-bottom: 40px; }
+
+    .context-items { display: flex; flex-direction: column; gap: 0; }
+    .ci {
+      display: flex; gap: 24px; align-items: flex-start;
+      position: relative; padding-bottom: 32px;
+    }
+    .ci:last-child { padding-bottom: 0; }
+    /* Vertical connector */
+    .ci__line {
+      display: flex; flex-direction: column; align-items: center;
+      flex-shrink: 0; width: 32px;
+    }
+    .ci__dot {
+      width: 32px; height: 32px; border-radius: 50%;
+      border: 2px solid var(--gold);
+      background: var(--ink);
+      display: grid; place-items: center;
+      font-size: .8rem; flex-shrink: 0; z-index: 1;
+    }
+    .ci__connector {
+      width: 1px; flex: 1; min-height: 24px;
+      background: rgba(255,255,255,.1);
+      margin-top: 4px;
+    }
+    .ci:last-child .ci__connector { display: none; }
+    .ci__body { padding-top: 4px; }
+    .ci__body h4 { color: var(--paper); font-size: .95rem; margin-bottom: 6px; }
+    .ci__body p  { color: rgba(255,255,255,.45); font-size: .86rem; margin: 0; }
+
+    /* ═══════════════════════════════════════════
+       PUBLIC PERCEPTION SPLIT
+    ═══════════════════════════════════════════ */
+    .perception-split {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 48px; align-items: center;
+    }
+    .perception-img img {
+      width: 100%; height: 400px; object-fit: cover;
+      box-shadow: var(--shadow-lg);
+    }
+    .perception-text .kicker { margin-bottom: 12px; display: block; }
+    .perception-text h2 { margin-bottom: 16px; }
+    .perception-text p { margin-bottom: 14px; }
+    .pbar-list { display: flex; flex-direction: column; gap: 16px; margin-top: 24px; }
+    .pbar {
+      background: var(--paper-dk);
+      border: 1px solid var(--rule);
+      padding: 16px 18px;
+    }
+    .pbar__top { display: flex; justify-content: space-between; margin-bottom: 8px; }
+    .pbar__label { font-family: var(--fra); font-size: .8rem; font-weight: 600; }
+    .pbar__pct   { font-family: var(--bas); font-size: .88rem; font-weight: 700; color: var(--gold); }
+    .pbar__track { height: 4px; background: var(--rule); overflow: hidden; }
+    .pbar__fill  { height: 100%; animation: barGrow 1.4s ease forwards; }
+    @keyframes barGrow { from{width:0} }
+    @media(max-width:840px) { .perception-split { grid-template-columns:1fr; } }
+
+    /* ═══════════════════════════════════════════
+       FUTURE OVERSIGHT — CARDS
+    ═══════════════════════════════════════════ */
+    .oversight-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--rule-dk); border: 1px solid var(--rule-dk); }
+    .oversight-card {
+      background: var(--cream); padding: 28px 24px;
+      transition: background .2s;
+    }
+    .oversight-card:hover { background: var(--gold-pale); }
+    .oversight-card__num {
+      font-family: var(--bas); font-size: 3rem; font-weight: 700;
+      color: rgba(0,0,0,.06); line-height: 1; margin-bottom: 12px;
+    }
+    .oversight-card h3 { font-size: 1rem; margin-bottom: 9px; }
+    .oversight-card p  { font-size: .86rem; }
+    @media(max-width:680px) { .oversight-grid { grid-template-columns: 1fr; } }
+
+    /* ═══════════════════════════════════════════
+       PHOTO STRIP
+    ═══════════════════════════════════════════ */
+    .photo-strip { padding: 0 0 72px; background: var(--paper); }
+    .photo-strip__grid {
+      display: grid; grid-template-columns: 1fr 1fr 1fr;
+      gap: 10px; height: 240px;
+    }
+    .photo-strip__grid img {
+      width: 100%; height: 100%; object-fit: cover;
+      box-shadow: var(--shadow); transition: filter .3s;
+      filter: saturate(.85);
+    }
+    .photo-strip__grid img:hover { filter: saturate(1.1); }
+    @media(max-width:640px) {
+      .photo-strip__grid { grid-template-columns: 1fr 1fr; height: auto; }
+      .photo-strip__grid img { height: 150px; }
+      .photo-strip__grid img:nth-child(1) { grid-column: span 2; height: 190px; }
+    }
+
+    /* ═══════════════════════════════════════════
+       FULL ARTICLE
+    ═══════════════════════════════════════════ */
+    .article-section { padding: 72px 0 64px; background: var(--cream); }
+    .article-layout {
+      display: grid; grid-template-columns: 260px 1fr;
+      gap: 56px; align-items: flex-start;
+    }
+
+    /* TOC */
+    .toc-wrap { position: sticky; top: 60px; }
+    .toc-box {
+      background: var(--paper);
+      border: 1px solid var(--rule-dk);
+      border-top: 3px solid var(--ink);
+      padding: 22px 20px;
+      box-shadow: var(--shadow);
+    }
+    .toc-title {
+      font-family: var(--fra); font-size: .65rem; font-weight: 700;
+      letter-spacing: .14em; text-transform: uppercase;
+      color: var(--faint); margin-bottom: 14px; padding-bottom: 10px;
+      border-bottom: 1px solid var(--rule);
+    }
+    .toc-ol { list-style: none; counter-reset: toc; display: flex; flex-direction: column; gap: 1px; }
+    .toc-ol li { counter-increment: toc; }
+    .toc-ol a {
+      display: flex; align-items: flex-start; gap: 10px;
+      font-family: var(--fra); font-size: .77rem; font-weight: 400;
+      color: var(--muted); padding: 6px 8px;
+      border-left: 2px solid transparent;
+      transition: border-color .18s, color .18s, background .18s; line-height: 1.4;
+    }
+    .toc-ol a::before {
+      content: counter(toc, decimal-leading-zero);
+      flex-shrink: 0; font-size: .65rem; font-weight: 700;
+      color: var(--gold); font-family: var(--fra); margin-top: 1px;
+    }
+    .toc-ol a:hover { border-left-color: var(--rule-dk); color: var(--ink); background: var(--paper-dk); }
+    .toc-ol a.active { border-left-color: var(--gold); color: var(--ink); font-weight: 600; }
+    .toc-time {
+      margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--rule);
+      font-family: var(--fra); font-size: .7rem; color: var(--faint);
+      display: flex; align-items: center; gap: 6px;
+    }
+
+    /* Article body */
+    .art-body { max-width: 740px; }
+    .art-header { margin-bottom: 44px; }
+    .art-header h2 { font-size: clamp(1.7rem,2.8vw,2.6rem); margin-bottom: 16px; }
+    .art-lead {
+      font-family: var(--bas); font-style: italic;
+      font-size: 1.06rem; color: var(--ink-mid); font-weight: 400;
+      line-height: 1.8; border-left: 3px solid var(--gold); padding-left: 18px;
+    }
+
+    .art-divider {
+      display: flex; align-items: center; gap: 14px;
+      margin: 40px 0;
+    }
+    .art-divider::before, .art-divider::after {
+      content: ''; flex: 1; height: 1px; background: var(--rule);
+    }
+    .art-divider span { color: var(--gold); font-size: .75rem; }
+
+    .art-sec h3 {
+      font-family: var(--bas); font-size: 1.35rem; font-weight: 700;
+      margin-bottom: 16px; padding-bottom: 10px;
+      border-bottom: 1px solid var(--rule);
+      color: var(--ink);
+    }
+    .art-sec p {
+      color: var(--ink-mid); font-size: .97rem;
+      line-height: 1.88; margin-bottom: 16px;
+      font-weight: 300; text-align: justify;
+    }
+    .art-sec p:last-child { margin-bottom: 0; }
+    .art-sec p strong { color: var(--ink); font-weight: 700; }
+
+    .art-img {
+      width: 100%; height: 280px; object-fit: cover;
+      margin: 22px 0 26px; box-shadow: var(--shadow); display: block;
+      filter: saturate(.9);
+    }
+
+    /* Pull quote */
+    .art-pullquote {
+      margin: 28px 0;
+      padding: 20px 24px;
+      border-left: 4px solid var(--gold);
+      background: var(--paper-dk);
+    }
+    .art-pullquote p {
+      font-family: var(--bas); font-style: italic;
+      font-size: 1.1rem !important; color: var(--ink) !important;
+      line-height: 1.6 !important; margin: 0 !important;
+      text-align: left !important;
+    }
+    .art-pullquote cite {
+      display: block; margin-top: 10px;
+      font-family: var(--fra); font-size: .72rem; font-weight: 600;
+      color: var(--faint); letter-spacing: .06em; text-transform: uppercase;
+      font-style: normal;
+    }
+
+    /* Callout */
+    .art-note {
+      background: var(--gold-pale); border: 1px solid rgba(196,154,40,.25);
+      border-left: 3px solid var(--gold);
+      padding: 15px 18px; display: flex; gap: 13px;
+      align-items: flex-start; margin: 22px 0;
+    }
+    .art-note--neutral { background: var(--paper-dk); border-color: var(--rule); border-left-color: var(--rule-dk); }
+    .art-note__icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 1px; }
+    .art-note p { margin:0 !important; font-size:.86rem !important; color:var(--ink) !important; font-weight:400 !important; text-align:left !important; }
+
+    /* Two col */
+    .art-two { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--rule); margin: 22px 0; border: 1px solid var(--rule); }
+    .art-two-card { background: var(--paper); padding: 18px 16px; }
+    .art-two-card h4 { font-family: var(--bas); font-size: .95rem; margin-bottom: 8px; }
+    .art-two-card p  { font-size: .85rem !important; margin:0 !important; text-align:left !important; }
+    @media(max-width:540px) { .art-two { grid-template-columns:1fr; } }
+
+    /* Inline list */
+    .art-list { list-style: none; margin: 16px 0; display: flex; flex-direction: column; gap: 8px; }
+    .art-list li {
+      display: flex; align-items: flex-start; gap: 10px;
+      font-family: var(--fra); font-size: .92rem; color: var(--ink-mid); font-weight: 300;
+    }
+    .art-list li::before {
+      content: '▸';
+      flex-shrink: 0; color: var(--gold); font-size: .7rem; margin-top: 4px;
+    }
+
+    /* Final CTA */
+    .art-finale {
+      background: var(--ink); padding: 34px 30px; margin-top: 28px;
+      border-left: 4px solid var(--gold);
+      position: relative; overflow: hidden;
+    }
+    .art-finale::before {
+      content: '"';
+      position: absolute; top: -20px; right: 20px;
+      font-family: var(--bas); font-size: 9rem; font-weight: 700;
+      color: rgba(255,255,255,.04); line-height: 1;
+    }
+    .art-finale h3 { color: var(--paper) !important; margin-bottom: 10px; font-size: 1.3rem; border: none !important; padding: 0 !important; position: relative; z-index: 1; }
+    .art-finale p { color: rgba(255,255,255,.55) !important; font-size:.95rem !important; margin-bottom:22px !important; text-align:left !important; position:relative; z-index:1; }
+    .art-finale p strong { color: var(--gold); }
+    .art-finale .btn-gold { position: relative; z-index: 1; }
+
+    /* Responsive */
+    @media(max-width:1040px) { .article-layout { grid-template-columns:220px 1fr; gap:36px; } }
+    @media(max-width:820px) {
+      .article-layout { grid-template-columns:1fr; }
+      .toc-wrap { position:static; } .toc-box { display:none; }
+    }
+
+    /* ═══════════════════════════════════════════
+       CTA
+    ═══════════════════════════════════════════ */
+    .cta-section { padding: 72px 0; background: var(--paper-dk); }
+    .cta-card {
+      background: var(--ink);
+      padding: 64px 56px;
+      display: grid; grid-template-columns: 1fr auto;
+      gap: 48px; align-items: center;
+      border-top: 4px double var(--gold);
+      box-shadow: var(--shadow-lg);
+      position: relative; overflow: hidden;
+    }
+    .cta-card::before {
+      content: '§';
+      position: absolute; right: 100px; bottom: -30px;
+      font-family: var(--bas); font-size: 12rem; font-weight: 700;
+      color: rgba(255,255,255,.03); line-height: 1;
+    }
+    .cta-card h2 { color: var(--paper); font-size: clamp(1.6rem,2.8vw,2.4rem); margin-bottom: 12px; position: relative; z-index: 1; }
+    .cta-card p  { color: rgba(255,255,255,.45); position: relative; z-index: 1; }
+    .cta-btns { display: flex; flex-direction: column; gap: 12px; flex-shrink: 0; z-index: 1; }
+    @media(max-width:800px) { .cta-card { grid-template-columns:1fr; padding:48px 32px; } .cta-card::before { display:none; } }
+
+    /* ═══════════════════════════════════════════
+       FOOTER
+    ═══════════════════════════════════════════ */
+    .footer {
+      background: var(--ink-mid);
+      border-top: 3px double rgba(255,255,255,.12);
+      padding: 52px 0 24px;
+    }
+    .footer__masthead {
+      text-align: center;
+      font-family: var(--bas); font-style: italic;
+      font-size: 1.6rem; font-weight: 700;
+      color: rgba(255,255,255,.7); margin-bottom: 36px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid rgba(255,255,255,.1);
+      letter-spacing: .01em;
+    }
+    .footer__masthead em { color: var(--gold); font-style: normal; }
+    .footer__grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; margin-bottom: 44px; }
+    .footer__brand p { font-size: .87rem; color: rgba(255,255,255,.3); max-width: 265px; line-height: 1.75; }
+    .footer h5 {
+      font-family: var(--fra); font-size: .65rem; font-weight: 700;
+      letter-spacing: .14em; text-transform: uppercase;
+      color: rgba(255,255,255,.25); margin-bottom: 14px;
+    }
+    .footer ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    .footer ul a { font-size: .87rem; color: rgba(255,255,255,.3); transition: color .2s; }
+    .footer ul a:hover { color: var(--gold); }
+    .footer__bottom {
+      border-top: 1px solid rgba(255,255,255,.07); padding-top: 22px;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 10px;
+      font-family: var(--fra); font-size: .72rem; color: rgba(255,255,255,.2);
+      font-style: italic;
+    }
+    @media(max-width:740px) { .footer__grid { grid-template-columns:1fr 1fr; } }
+    @media(max-width:480px) { .footer__grid { grid-template-columns:1fr; } }
+
+    /* ═══════════════════════════════════════════
+       REVEAL
+    ═══════════════════════════════════════════ */
+    .reveal { opacity:0; transform:translateY(18px); transition:opacity .55s ease, transform .55s ease; }
+    .reveal.visible { opacity:1; transform:translateY(0); }
+  </style>
+</head>
+<body>
+
+  <!-- Masthead -->
+  <header class="masthead">
+    <div class="container">
+      <div class="masthead__inner">
+        <div class="masthead__date">Monday, March 30, 2026</div>
+        <div class="masthead__logo">The Policy <em>Review</em></div>
+        <div class="masthead__tag">Analysis · Politics · Economy</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Nav -->
+  <nav class="nav" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav__inner">
+        <ul class="nav__sections">
+          <li><a href="#debate">The Debate</a></li>
+          <li><a href="#minerals">Critical Minerals</a></li>
+          <li><a href="#context">Political Context</a></li>
+          <li><a href="#oversight">Future Oversight</a></li>
+          <li><a href="#full-guide">Full Analysis</a></li>
+        </ul>
+        <a href="#cta" class="nav__cta">Join the Discussion →</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ═══ HERO ══════════════════════════════ -->
+    <section class="hero grain" aria-label="Article header">
+      <div class="container">
+        <div class="hero__layout">
+          <div class="hero__left">
+            <div class="hero__meta">
+              <span class="label-pill label-pill--info">Policy Analysis</span>
+              <time datetime="2026-03-30">March 30, 2026</time>
+            </div>
+            <h1>Should Republicans Have<br />Allowed a Subpoena for<br /><em>Donald Trump Jr.?</em></h1>
+            <p class="hero__deck">
+              The debate over congressional oversight of critical mineral investments raises fundamental questions about transparency, national security, and the limits of partisan accountability in American governance.
+            </p>
+            <div class="hero__byline">
+              <strong>The Policy Review</strong>
+              <span class="hero__byline-sep"></span>
+              Political Analysis Desk
+              <span class="hero__byline-sep"></span>
+              14 min read
+            </div>
+            <div class="hero__btns">
+              <a href="#full-guide" class="btn-ink">Read Full Analysis</a>
+              <a href="#debate" class="btn-outline-ink">See the Debate</a>
+            </div>
+          </div>
+          <div class="hero__rule-v"></div>
+          <div class="hero__right">
+            <div class="hero__img-main">
+              <img
+                src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=900&q=80"
+                alt="United States Capitol building representing congressional oversight and political accountability"
+                loading="eager"
+              />
+              <div class="hero__img-caption">
+                The Capitol, Washington D.C. — where the debate over oversight authority continues.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Context Bar -->
+    <div class="context-bar">
+      <div class="container">
+        <div class="context-bar__row">
+          <div class="context-item">
+            <span class="context-item__label">Issue</span>
+            <span class="context-item__val">Congressional Subpoena</span>
+          </div>
+          <div class="context-item">
+            <span class="context-item__label">Subject</span>
+            <span class="context-item__val">Critical Mineral Investments</span>
+          </div>
+          <div class="context-item">
+            <span class="context-item__label">Key Stakes</span>
+            <span class="context-item__val">National Security &amp; Transparency</span>
+          </div>
+          <div class="context-item">
+            <span class="context-item__label">Verdict</span>
+            <span class="context-item__val">Contested — Both Sides Have Merit</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ INTRO ══════════════════════════════ -->
+    <section class="sec sec--cream" aria-labelledby="intro-h">
+      <div class="container">
+        <div class="section-rule reveal"><span>Introduction</span></div>
+        <div class="intro-cols reveal">
+          <div class="intro-main">
+            <p>The debate over whether Republicans should have allowed a subpoena for Donald Trump Jr. regarding his backing of critical mineral companies has sparked intense political and public discussion. At its core, this issue touches on transparency, political accountability, economic strategy, and the growing importance of critical minerals in global supply chains.</p>
+            <p>As governments worldwide compete for control over resources like lithium, cobalt, and rare earth elements, any perceived conflict of interest involving influential figures becomes a matter of national interest. But does this situation justify a subpoena, or is it an example of political overreach?</p>
+            <p>In this analysis, we explore the key arguments, implications, and broader context surrounding this controversial question — presenting the strongest case from each perspective.</p>
+          </div>
+          <div class="intro-cols__rule"></div>
+          <div class="intro-sidebar">
+            <div class="aside-box">
+              <div class="aside-box__title">What Is a Subpoena?</div>
+              <p>A congressional subpoena is a formal legal order compelling testimony or the production of documents. It carries the force of law and can result in contempt of Congress charges if ignored.</p>
+              <p>Subpoenas are among the most powerful tools available to congressional oversight committees — and among the most politically consequential.</p>
+            </div>
+            <div class="aside-box">
+              <div class="aside-box__title">Why This Case Matters</div>
+              <p>Critical minerals are central to modern technology, defense, and the clean energy transition. Oversight of investment activity in this sector intersects with both national security policy and private business interests.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CRITICAL MINERALS ═════════════════ -->
+    <section class="sec sec--paper" id="minerals" aria-labelledby="minerals-h">
+      <div class="container">
+        <div class="section-rule reveal"><span>Understanding the Sector</span></div>
+        <div class="sec-head reveal" style="margin-bottom:32px">
+          <span class="kicker">Background</span>
+          <h2 id="minerals-h">The Strategic Importance of Critical Minerals</h2>
+          <p style="max-width:680px">Critical minerals are not just commodities — they are foundational to military readiness, technology independence, and the global energy transition. This context is essential to understanding why oversight matters.</p>
+        </div>
+        <div class="mineral-grid reveal">
+          <div class="mineral-card">
+            <div class="mineral-card__symbol">Li</div>
+            <div class="mineral-card__name">Lithium</div>
+            <h3>Electric Vehicle Batteries</h3>
+            <p>Essential for rechargeable batteries in EVs, mobile devices, and grid storage. The US imports the majority of its supply — reducing dependence is a stated national priority.</p>
+          </div>
+          <div class="mineral-card">
+            <div class="mineral-card__symbol">Co</div>
+            <div class="mineral-card__name">Cobalt</div>
+            <h3>Defense &amp; Aerospace</h3>
+            <p>Used in jet engines, magnets, and battery cathodes. Over 70% of global supply comes from the Democratic Republic of Congo, raising both supply chain and geopolitical concerns.</p>
+          </div>
+          <div class="mineral-card">
+            <div class="mineral-card__symbol">REE</div>
+            <div class="mineral-card__name">Rare Earth Elements</div>
+            <h3>Advanced Electronics &amp; Weapons</h3>
+            <p>Critical for guided missiles, radar systems, electric motors, and semiconductors. China currently controls approximately 85% of global rare earth processing capacity.</p>
+          </div>
+        </div>
+        <div class="art-note" style="margin-top:24px">
+          <span class="art-note__icon">⚖️</span>
+          <p>Because of their strategic importance, investments in critical mineral companies are not merely business decisions — they can carry geopolitical consequences. This is why involvement by politically connected individuals draws heightened scrutiny from oversight bodies.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ DEBATE ════════════════════════════ -->
+    <section class="sec sec--paper" id="debate" aria-labelledby="debate-h">
+      <div class="container">
+        <div class="section-rule reveal"><span>The Central Debate</span></div>
+        <div class="sec-head--center reveal" style="text-align:center;max-width:680px;margin:0 auto 36px">
+          <span class="kicker">Arguments</span>
+          <h2 id="debate-h">The Case For and Against the Subpoena</h2>
+          <p>Both sides of this debate reflect legitimate concerns. We present each position as its strongest proponents would argue it.</p>
+        </div>
+        <div class="debate-header reveal">
+          <div class="debate-header__side debate-header__side--pro">✓ Arguments in Favour of Allowing the Subpoena</div>
+          <div class="debate-header__side debate-header__side--con">✗ Arguments Against Allowing the Subpoena</div>
+        </div>
+        <div class="debate-grid reveal">
+          <div class="debate-col debate-col--pro">
+            <div class="debate-point">
+              <div class="debate-point__icon debate-point__icon--pro">🔍</div>
+              <div>
+                <h4>Promoting Transparency &amp; Accountability</h4>
+                <p>Supporters argue that public trust depends on transparency. When influential individuals are involved in strategic industries, oversight ensures there is no misuse of power or insider advantage. Even if no wrongdoing is found, the process reinforces confidence in institutions.</p>
+              </div>
+            </div>
+            <div class="debate-point">
+              <div class="debate-point__icon debate-point__icon--pro">🛡️</div>
+              <div>
+                <h4>Protecting National Interests</h4>
+                <p>Critical minerals are tied to national security — not just any investment category. Any potential overlap between political influence and private gain in this sector must be examined carefully to avoid risks to policy integrity.</p>
+              </div>
+            </div>
+            <div class="debate-point">
+              <div class="debate-point__icon debate-point__icon--pro">⚖️</div>
+              <div>
+                <h4>Equal Application of Oversight</h4>
+                <p>If similar scrutiny has been applied to politically connected figures from other parties, then consistency demands that all individuals — regardless of political affiliation — be subject to the same standards of accountability.</p>
+              </div>
+            </div>
+          </div>
+          <div class="debate-rule"></div>
+          <div class="debate-col debate-col--con">
+            <div class="debate-point">
+              <div class="debate-point__icon debate-point__icon--con">⚠️</div>
+              <div>
+                <h4>Concerns About Political Motivation</h4>
+                <p>Opponents argue that subpoenas can be weaponised as political tools rather than genuine oversight mechanisms. Such actions could set a precedent where investigations are driven more by partisan agendas than by evidence of actual wrongdoing.</p>
+              </div>
+            </div>
+            <div class="debate-point">
+              <div class="debate-point__icon debate-point__icon--con">📋</div>
+              <div>
+                <h4>Lack of Concrete Evidence</h4>
+                <p>Some argue that a subpoena should only be issued when there is strong, clear evidence of wrongdoing — not merely suspicion or political association. Without a higher threshold, investigations could become overly broad and constitutionally problematic.</p>
+              </div>
+            </div>
+            <div class="debate-point">
+              <div class="debate-point__icon debate-point__icon--con">📉</div>
+              <div>
+                <h4>Risk of Normalising Overreach</h4>
+                <p>Frequent use of subpoenas in politically sensitive cases could normalise aggressive oversight tactics — potentially discouraging private investment in key national security industries or deterring public engagement from qualified individuals.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ POLITICAL CONTEXT ═════════════════ -->
+    <section class="context-section" id="context" aria-labelledby="context-h">
+      <div class="container">
+        <div class="section-rule reveal"><span style="color:rgba(255,255,255,.35)">Broader Context</span></div>
+        <h2 id="context-h" style="color:var(--paper);margin-bottom:10px;" class="reveal">The Broader Political Landscape</h2>
+        <p style="color:var(--faint);margin-bottom:40px;max-width:680px;" class="reveal">This debate doesn't exist in isolation. It reflects larger structural tensions in American politics that have been building for years across party lines.</p>
+        <div class="context-items reveal">
+          <div class="ci">
+            <div class="ci__line"><div class="ci__dot">⚡</div><div class="ci__connector"></div></div>
+            <div class="ci__body">
+              <h4>Increasing Political Polarisation</h4>
+              <p>Decisions about oversight now take place in a climate of deep partisan division, where actions that might once have been bipartisan are frequently viewed through an adversarial lens by both sides.</p>
+            </div>
+          </div>
+          <div class="ci">
+            <div class="ci__line"><div class="ci__dot">🏭</div><div class="ci__connector"></div></div>
+            <div class="ci__body">
+              <h4>Growing Scrutiny of Business-Political Relationships</h4>
+              <p>Across both parties, there is increasing public and legislative focus on the relationship between private investment activity and political access — particularly in sectors touched by government policy and subsidy.</p>
+            </div>
+          </div>
+          <div class="ci">
+            <div class="ci__line"><div class="ci__dot">🌍</div><div class="ci__connector"></div></div>
+            <div class="ci__body">
+              <h4>The Rise of Economic Nationalism</h4>
+              <p>Sectors like mining, energy, and technology have moved to the centre of political discourse as supply chain security has become a national priority, raising the stakes for oversight of anyone with influence in these industries.</p>
+            </div>
+          </div>
+          <div class="ci">
+            <div class="ci__line"><div class="ci__dot">🏛️</div></div>
+            <div class="ci__body">
+              <h4>The Precedent Question</h4>
+              <p>Whatever decision is made in this case carries weight beyond the immediate controversy — potentially shaping how future oversight investigations are initiated, conducted, and perceived for years to come.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ PUBLIC PERCEPTION ════════════════ -->
+    <section class="sec sec--paper" aria-labelledby="perc-h">
+      <div class="container">
+        <div class="perception-split reveal">
+          <div class="perception-img">
+            <img
+              src="https://images.unsplash.com/photo-1555848962-6e79363ec58f?w=900&q=80"
+              alt="American citizens engaged in political discussion representing public opinion on accountability"
+              loading="lazy"
+            />
+          </div>
+          <div class="perception-text">
+            <span class="kicker">Public Opinion</span>
+            <h2 id="perc-h">How Public Perception Shapes the Outcome</h2>
+            <p>Public opinion plays a significant role in shaping the outcome of such debates. For many citizens, the question is not just about legality but about ethics and trust in democratic institutions.</p>
+            <p>If people believe political figures can benefit from insider access without accountability, it erodes confidence. But if investigations appear politically motivated, that also damages trust — creating a genuinely difficult balance for policymakers to navigate.</p>
+            <div class="pbar-list">
+              <div class="pbar">
+                <div class="pbar__top">
+                  <span class="pbar__label">Public support for stronger oversight of political investments</span>
+                  <span class="pbar__pct">67%</span>
+                </div>
+                <div class="pbar__track"><div class="pbar__fill" style="width:67%;background:var(--gold)"></div></div>
+              </div>
+              <div class="pbar">
+                <div class="pbar__top">
+                  <span class="pbar__label">Concern that congressional investigations are politically motivated</span>
+                  <span class="pbar__pct">58%</span>
+                </div>
+                <div class="pbar__track"><div class="pbar__fill" style="width:58%;background:var(--rule-dk)"></div></div>
+              </div>
+              <div class="pbar">
+                <div class="pbar__top">
+                  <span class="pbar__label">Belief that disclosure requirements should cover all political families</span>
+                  <span class="pbar__pct">74%</span>
+                </div>
+                <div class="pbar__track"><div class="pbar__fill" style="width:74%;background:var(--gold)"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ FUTURE OVERSIGHT ══════════════════ -->
+    <section class="sec sec--cream" id="oversight" aria-labelledby="oversight-h">
+      <div class="container">
+        <div class="section-rule reveal"><span>Looking Ahead</span></div>
+        <div class="sec-head reveal" style="margin-bottom:32px">
+          <span class="kicker">Implications</span>
+          <h2 id="oversight-h">What This Means for Future Oversight</h2>
+          <p style="max-width:660px">Key considerations that will shape how similar cases are approached in the future, regardless of how this particular dispute resolves.</p>
+        </div>
+        <div class="oversight-grid reveal">
+          <div class="oversight-card">
+            <div class="oversight-card__num">01</div>
+            <h3>Clear Standards for Subpoenas</h3>
+            <p>Establishing a transparent, bipartisan threshold for when subpoenas are justified — based on evidence rather than political calculus — would strengthen the legitimacy of the oversight process itself.</p>
+          </div>
+          <div class="oversight-card">
+            <div class="oversight-card__num">02</div>
+            <h3>Bipartisan Cooperation in Oversight</h3>
+            <p>Investigations seen as one-sided are easily dismissed as partisan attacks. Meaningful accountability requires buy-in from both parties — or at minimum, a framework that neither side can easily weaponise.</p>
+          </div>
+          <div class="oversight-card">
+            <div class="oversight-card__num">03</div>
+            <h3>Clear Ethical Guidelines for Political Families</h3>
+            <p>The intersection of business and political influence — particularly in national security sectors — demands stronger, proactive disclosure requirements rather than reactive investigations after controversies arise.</p>
+          </div>
+        </div>
+        <div class="art-note art-note--neutral" style="margin-top:28px">
+          <span class="art-note__icon">📌</span>
+          <p>The decision on whether to allow a subpoena in this case could set an important precedent that influences how investigations are handled in industries tied to national security for years to come — making the stakes of the decision considerably higher than the immediate controversy suggests.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Photo Strip -->
+    <div class="photo-strip" aria-label="Political and economic context photography">
+      <div class="container">
+        <div class="photo-strip__grid reveal">
+          <img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=600&q=80"
+            alt="US Capitol representing congressional authority and oversight power" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=600&q=80"
+            alt="Mining operation extracting critical minerals essential for national security" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1478860409698-8707f313ee8b?w=600&q=80"
+            alt="Political figures discussing accountability and transparency in governance" loading="lazy" />
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ FULL ARTICLE ══════════════════════ -->
+    <section class="article-section" id="full-guide" aria-labelledby="art-h">
+      <div class="container">
+        <div class="article-layout">
+
+          <!-- TOC -->
+          <aside class="toc-wrap" aria-label="Table of Contents">
+            <div class="toc-box">
+              <div class="toc-title">Contents</div>
+              <ol class="toc-ol">
+                <li><a href="#a1">Understanding Critical Minerals</a></li>
+                <li><a href="#a2">Why Was a Subpoena Considered?</a></li>
+                <li><a href="#a3">Arguments in Favour</a></li>
+                <li><a href="#a4">Arguments Against</a></li>
+                <li><a href="#a5">Broader Political Context</a></li>
+                <li><a href="#a6">Impact on Public Perception</a></li>
+                <li><a href="#a7">Future Oversight Implications</a></li>
+                <li><a href="#a8">Business and Politics Intersection</a></li>
+                <li><a href="#a9">Conclusion</a></li>
+              </ol>
+              <div class="toc-time">⏱ 14 min read</div>
+            </div>
+          </aside>
+
+          <!-- Article -->
+          <article class="art-body" itemscope itemtype="https://schema.org/Article">
+
+            <header class="art-header">
+              <span class="kicker">Policy Analysis</span>
+              <h2 id="art-h" itemprop="headline">Should Republicans Have Allowed a Subpoena for Donald Trump Jr. Over Critical Mineral Investments?</h2>
+              <p class="art-lead">The debate over whether Republicans should have allowed a subpoena for Donald Trump Jr. regarding his backing of critical mineral companies has sparked intense political and public discussion. At its core, this issue touches on transparency, political accountability, economic strategy, and the growing importance of critical minerals in global supply chains.</p>
+            </header>
+
+            <div class="art-divider"><span>◆</span></div>
+
+            <!-- Section 1 -->
+            <div class="art-sec" id="a1">
+              <h3>Understanding the Role of Critical Minerals</h3>
+              <img class="art-img"
+                src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=860&q=80"
+                alt="Critical mineral mining operation showing lithium extraction for national security supply chains"
+                loading="lazy"
+              />
+              <p>Critical minerals are essential for modern technology and national security. They are used in electric vehicles, renewable energy systems, defense equipment, and advanced electronics. Countries like the United States are increasingly focused on securing stable supply chains to reduce reliance on foreign sources, particularly China.</p>
+              <p>Because of their strategic importance, investments in critical mineral companies are not just business decisions — they can have geopolitical consequences. This is why any involvement by politically connected individuals draws scrutiny.</p>
+              <div class="art-note">
+                <span class="art-note__icon">🌐</span>
+                <p><strong>Key context:</strong> China controls approximately 85% of global rare earth element processing capacity. The US has identified 50 minerals as critical to national security and economic prosperity, making domestic and allied-nation investment in this sector a strategic priority.</p>
+              </div>
+            </div>
+
+            <div class="art-divider"><span>◆</span></div>
+
+            <!-- Section 2 -->
+            <div class="art-sec" id="a2">
+              <h3>Why Was a Subpoena Considered?</h3>
+              <p>The call for a subpoena arose from concerns about potential conflicts of interest. Critics argued that if a high-profile political figure like Donald Trump Jr. is backing companies in a sector tied to national security, there should be transparency about financial interests, business relationships, and potential influence on policy decisions.</p>
+              <p>A subpoena would compel testimony or documents, allowing lawmakers to assess whether any ethical or legal boundaries were crossed.</p>
+              <div class="art-pullquote">
+                <p>"When private investment intersects with national security policy, the public has a legitimate interest in understanding the full picture — regardless of political affiliation."</p>
+                <cite>— Argument from oversight proponents</cite>
+              </div>
+            </div>
+
+            <div class="art-divider"><span>◆</span></div>
+
+            <!-- Section 3 -->
+            <div class="art-sec" id="a3">
+              <h3>Arguments in Favour of Allowing the Subpoena</h3>
+              <p>Supporters of the subpoena argued that public trust depends on transparency. When influential individuals are involved in strategic industries, oversight ensures there is no misuse of power or insider advantage. Even if no wrongdoing is found, the process itself can reinforce confidence in institutions.</p>
+              <p>Critical minerals are not just another investment category — they are tied to national security. Any potential overlap between political influence and private gain must be examined carefully to avoid risks to policy integrity.</p>
+              <p>Another key argument is fairness. If similar scrutiny has been applied to figures from other political parties, then consistency demands that all individuals — regardless of affiliation — be subject to the same standards.</p>
+              <ul class="art-list">
+                <li>Transparency in strategic sectors is a matter of national interest, not merely political preference</li>
+                <li>The oversight process itself has value independent of whether wrongdoing is ultimately found</li>
+                <li>Consistent application of standards strengthens democratic norms regardless of outcome</li>
+              </ul>
+            </div>
+
+            <div class="art-divider"><span>◆</span></div>
+
+            <!-- Section 4 -->
+            <div class="art-sec" id="a4">
+              <h3>Arguments Against Allowing the Subpoena</h3>
+              <img class="art-img"
+                src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=860&q=80"
+                alt="US Capitol dome representing the balance between oversight power and constitutional limits"
+                loading="lazy"
+              />
+              <p>Opponents argued that such subpoenas can be used as political tools rather than genuine oversight mechanisms. They believed this could set a precedent where investigations are driven more by partisan agendas than evidence — a concern with implications beyond this particular case.</p>
+              <p>Some Republicans felt that a subpoena should only be issued when there is strong, clear evidence of wrongdoing — not just suspicion or association. Without this threshold, investigations could become overly broad and raise constitutional concerns about legislative overreach.</p>
+              <p>There is also concern that frequent use of subpoenas in politically sensitive cases could normalise aggressive oversight tactics, potentially discouraging private investment or public engagement in key industries at a time when the US needs to accelerate its critical mineral supply chain development.</p>
+              <div class="art-two">
+                <div class="art-two-card">
+                  <h4>The Evidence Threshold Question</h4>
+                  <p>Where should the bar be set for compelled testimony? Suspicion and association alone may be insufficient grounds for the most coercive oversight tool available.</p>
+                </div>
+                <div class="art-two-card">
+                  <h4>The Chilling Effect Risk</h4>
+                  <p>Aggressive oversight in strategically vital industries could deter the very private investment that US supply chain security policy depends on to compete with China.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="art-divider"><span>◆</span></div>
+
+            <!-- Section 5 -->
+            <div class="art-sec" id="a5">
+              <h3>The Broader Political Context</h3>
+              <p>This debate doesn't exist in isolation. It reflects larger tensions in American politics, including increasing polarisation between parties, growing scrutiny of business-political relationships, and the rising importance of economic nationalism.</p>
+              <p>The issue also highlights how economic sectors like mining and energy are becoming central to political discourse in ways that were largely absent from mainstream political debate a decade ago.</p>
+              <div class="art-pullquote">
+                <p>"The same forces that make critical minerals a national security priority are the forces that make oversight of investment in this sector a genuinely contested political question."</p>
+                <cite>— Policy Review Analysis</cite>
+              </div>
+            </div>
+
+            <div class="art-divider"><span>◆</span></div>
+
+            <!-- Section 6 -->
+            <div class="art-sec" id="a6">
+              <h3>Impact on Public Perception</h3>
+              <p>Public opinion plays a significant role in shaping the outcome of such debates. For many citizens, the question is not just about legality but about ethics and trust.</p>
+              <p>If people believe that political figures can benefit from insider access without accountability, it can erode confidence in democratic institutions. On the other hand, if investigations are seen as politically motivated, that can also damage trust.</p>
+              <p>Balancing these perceptions is one of the biggest challenges for policymakers navigating oversight decisions in a highly polarised environment.</p>
+            </div>
+
+            <div class="art-divider"><span>◆</span></div>
+
+            <!-- Section 7 -->
+            <div class="art-sec" id="a7">
+              <h3>What This Means for Future Oversight</h3>
+              <p>The decision on whether to allow a subpoena in this case could set an important precedent. It may influence how future investigations are handled, particularly in industries tied to national security.</p>
+              <ul class="art-list">
+                <li>Establishing clear, transparent standards for when subpoenas are justified across party lines</li>
+                <li>Ensuring bipartisan cooperation in oversight decisions to preserve institutional legitimacy</li>
+                <li>Maintaining a sustainable balance between aggressive transparency and protection from politically motivated investigations</li>
+              </ul>
+              <p>These factors will shape how similar cases are approached in the future, and potentially how willing qualified private-sector figures are to engage in public life.</p>
+            </div>
+
+            <div class="art-divider"><span>◆</span></div>
+
+            <!-- Section 8 -->
+            <div class="art-sec" id="a8">
+              <h3>The Intersection of Business and Politics</h3>
+              <img class="art-img"
+                src="https://images.unsplash.com/photo-1478860409698-8707f313ee8b?w=860&q=80"
+                alt="Business and political figures symbolising the growing overlap of private investment and public policy"
+                loading="lazy"
+              />
+              <p>This situation also highlights a broader trend: the increasing overlap between business interests and political influence. In sectors like critical minerals, technology, and energy, this intersection is becoming more pronounced as government policy increasingly shapes private sector outcomes.</p>
+              <p>As a result, there is growing demand for clear ethical guidelines, strong disclosure requirements, and independent oversight mechanisms. Without these safeguards, controversies like this are likely to become more common regardless of which party is in power.</p>
+              <div class="art-note">
+                <span class="art-note__icon">📋</span>
+                <p><strong>A structural observation:</strong> The absence of robust, pre-existing disclosure frameworks for political family members in strategically sensitive sectors is arguably the root cause of this controversy — suggesting that proactive legislative solutions may be more durable than reactive subpoenas.</p>
+              </div>
+            </div>
+
+            <div class="art-divider"><span>◆</span></div>
+
+            <!-- Conclusion -->
+            <div class="art-sec" id="a9">
+              <h3>Conclusion</h3>
+              <p>The question of whether Republicans should have allowed a subpoena for Donald Trump Jr. ultimately depends on one's perspective on transparency, evidence standards, and political intent.</p>
+              <p>Supporters see it as a necessary step for accountability, while opponents view it as potentially unnecessary or politically driven. What is clear, however, is that the issue reflects deeper challenges in balancing oversight with fairness in an increasingly complex political and economic landscape.</p>
+              <p>The debate also points toward a broader need: clearer, pre-emptive standards that govern the intersection of political families, private investment, and national security sectors — standards that neither side could easily accuse the other of applying selectively.</p>
+              <div class="art-finale">
+                <h3>Join the Discussion</h3>
+                <p>What do you think? Should political figures and their business dealings always be subject to strict oversight, or should there be higher thresholds before launching investigations? Share your perspective — <strong>your view shapes informed public discourse on transparency and accountability.</strong></p>
+                <a href="#cta" class="btn-gold">Share Your Perspective →</a>
+              </div>
+            </div>
+
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CTA ════════════════════════════════ -->
+    <section class="cta-section" id="cta" aria-labelledby="cta-h">
+      <div class="container">
+        <div class="cta-card reveal">
+          <div>
+            <h2 id="cta-h">The Debate Continues.<br />Your Voice Matters.</h2>
+            <p>Subscribe to The Policy Review for balanced, evidence-based analysis of the political and economic questions shaping American governance. No partisan framing — just the strongest version of every argument.</p>
+          </div>
+          <div class="cta-btns">
+            <a href="#" class="btn-gold">Subscribe to Analysis</a>
+            <a href="#" class="btn-outline-ink" style="color:rgba(255,255,255,.6);border-color:rgba(255,255,255,.2);">Browse More Analysis</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══ FOOTER ════════════════════════════ -->
+  <footer class="footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer__masthead">
+        The Policy <em>Review</em>
+      </div>
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <p>Independent, balanced analysis of American politics, policy, and governance. We present every argument in its strongest form — and let readers decide.</p>
+        </div>
+        <div>
+          <h5>Topics</h5>
+          <ul>
+            <li><a href="#debate">The Subpoena Debate</a></li>
+            <li><a href="#minerals">Critical Minerals</a></li>
+            <li><a href="#context">Political Context</a></li>
+            <li><a href="#oversight">Future Oversight</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>More Analysis</h5>
+          <ul>
+            <li><a href="#">Congressional Oversight Powers</a></li>
+            <li><a href="#">US Critical Mineral Policy</a></li>
+            <li><a href="#">Political Ethics & Disclosure</a></li>
+            <li><a href="#">Economic Nationalism</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2026 The Policy Review. All rights reserved.</span>
+        <span>Analysis published in the public interest. All views presented represent positions held by their respective proponents.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll reveal
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+    // Stagger items
+    document.querySelectorAll('.mineral-card').forEach((c,i) => c.style.transitionDelay = `${i*70}ms`);
+    document.querySelectorAll('.oversight-card').forEach((c,i) => c.style.transitionDelay = `${i*65}ms`);
+    document.querySelectorAll('.ci').forEach((c,i) => c.style.transitionDelay = `${i*80}ms`);
+
+    // Active TOC
+    const secs = document.querySelectorAll('[id^="a"]');
+    const links = document.querySelectorAll('.toc-ol a');
+    window.addEventListener('scroll', () => {
+      let cur = '';
+      secs.forEach(s => { if (window.scrollY >= s.offsetTop - 110) cur = s.id; });
+      links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === `#${cur}`));
+    });
+  </script>
+</body>
+</html>
